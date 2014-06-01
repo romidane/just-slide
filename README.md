@@ -1,4 +1,4 @@
 just-slide
 ==========
 
-This just another slider that does the simple things well.
+This just another slider that does what its supposed to do.
