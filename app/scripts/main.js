@@ -60,8 +60,16 @@ var smartSlider = (function(slider) {
                         direction: "left"
                     });
 
-                }, 10000);
+                }, 8000);
             }
+        },
+
+        resetInterval: {
+            value: function() {
+                clearInterval(this.interval);
+                this.animate();
+            },
+            enumerable: true
         },
 
         start: {
@@ -70,6 +78,7 @@ var smartSlider = (function(slider) {
                 that.animate();
                 [].forEach.call(this.options.buttons, function(elem) {
                     elem.addEventListener('click', function(e) {
+                        that.resetInterval();
                         var data = e.target.getAttribute('data-direction');
                         that.transition({
                             direction: data
