@@ -9,7 +9,40 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
+        <style>
+            .slider {
+                width: 600px;
+                height: 300px;
+                position: relative;
+                margin: 0 auto;
+            }
 
+            .button {
+                width: 25px;
+                height: 25px;
+                color: #fff;
+                position: absolute;
+            }
+
+            .left {
+                position: absolute;
+                left: 2%;
+                top: 50%;
+                margin-top: -13px;
+            }
+
+            .right {
+                position: absolute;
+                right: 2%;
+                top: 50%;
+                margin-top: -13px;
+            }
+
+            #main-img {
+                transition: all 1s ease-in-out;            
+            }
+
+        </style>
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
@@ -22,14 +55,10 @@
         <![endif]-->
 
 
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-
-
-          </ul>
+        <div class="slider">
+            <img src="images/1.jpg" alt="" id="main-img">
+            <a href="#" class="button left" data-direction="right">right</a>
+            <a href="#" class="button right" data-direction="left">left</a>
         </div>
 
 
